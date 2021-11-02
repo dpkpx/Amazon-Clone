@@ -2,4 +2,29 @@
   margin: 0;
   padding: 0;
 }
+
+h1 {
+  background-size: 200%;
+  background-position: top left;
+  -webkit-animation: myanimation 1s linear infinite alternate;
+          animation: myanimation 1s linear infinite alternate;
+}
+
+@-webkit-keyframes myanimation {
+  from {
+    background-position: top left;
+  }
+  to {
+    background-position: top right;
+  }
+}
+
+@keyframes myanimation {
+  from {
+    background-position: top left;
+  }
+  to {
+    background-position: top right;
+  }
+}
 /*# sourceMappingURL=style.css.map */

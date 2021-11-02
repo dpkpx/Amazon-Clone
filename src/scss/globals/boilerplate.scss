@@ -2,3 +2,15 @@
     margin: 0;
     padding: 0;
 }
+
+h1{
+    background-size: 200%;
+    background-position: top left;
+    animation: myanimation 1s linear infinite alternate;
+}
+
+
+@keyframes myanimation {
+    from {background-position: top left}
+    to {background-position: top right}
+}
