@@ -1,0 +1,1 @@
+{"version":3,"sources":["globals/boilerplate.scss","style.css"],"names":[],"mappings":"AAAA;EACI,SAAA;EACA,UAAA;ACCJ","file":"style.css","sourcesContent":["*,::after,::before{\r\n    margin: 0;\r\n    padding: 0;\r\n}","*, ::after, ::before {\n  margin: 0;\n  padding: 0;\n}"]}
