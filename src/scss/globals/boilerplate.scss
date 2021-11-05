@@ -1,16 +1,23 @@
+
 *,::after,::before{
     margin: 0;
     padding: 0;
-}
-
-h1{
-    background-size: 200%;
-    background-position: top left;
-    animation: myanimation 1s linear infinite alternate;
+    box-sizing: border-box;
 }
 
 
-@keyframes myanimation {
-    from {background-position: top left}
-    to {background-position: top right}
+body{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    min-height: 100vh;
 }
+.container{
+    width: 100vw;
+    height: calc(100vh - 60px);
+    display: grid;
+    place-content: center;
+
+    
+}
+
+
