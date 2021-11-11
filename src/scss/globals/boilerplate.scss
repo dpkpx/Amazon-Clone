@@ -1,4 +1,8 @@
 
+html{
+    min-width: max-content;
+}
+
 *,::after,::before{
     margin: 0;
     padding: 0;
@@ -7,12 +11,14 @@
 
 
 body{
-    font-family: 'Inter', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 14px;
-    min-height: 100vh;
+    width: max-content;
+    min-height: 120vh;
+    
 }
+
 .container{
-    width: 100vw;
     height: calc(100vh - 60px);
     display: grid;
     place-content: center;

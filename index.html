@@ -11,29 +11,29 @@
     <link rel="stylesheet" href="./dist/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-    <div class="nav">
-        <a role="link" class="nav__logo">
-            <span class="nav__logo_img"></span>
+    <div class="nav nav-hover flex">
+        <a role="link" class="nav__logo nav-item flex">
+            <span class="nav__logo_img nav-icon"></span>
             <span class="nav__logo_text">.in</span>
         </a> <!-- nav__logo -->
 
-        <div class="nav__location">
-            <div class="nav__location_logo"></div>
+        <div class="nav__location nav-item flex">
+            <div class="nav__location_logo nav-icon"></div>
             <div class="nav__location_text nav-text">
                 Hello <br> Select your address
             </div>
         </div> <!-- nav__location -->
 
-        <div class="nav__search">
-            <div class="nav__search_categories">
+        <div class="nav__search flex">
+            <div class="nav__search_categories flex">
                 <span class="nav__search_categories_selected_label" id="selected_categories">All</span>
-                <i class="nav__search_categories_selected_down_arrow"></i>
+                <i class="nav__search_categories_selected_down_arrow nav-down-arrow"></i>
                 <select class="nav__search_categories_list" id="categories">
                     <option selected="selected" value="aps">All Categories</option>
                     <option value="todays-deals">Deals</option>
@@ -80,30 +80,31 @@
             </div>
 
             <input type="text" class="nav__search_text">
+           
 
-            <button class="nav__search_button" type="submit"></button>
+            <button class="nav__search_button nav-icon" type="submit"></button>
 
         </div><!-- nav__search -->
 
-        <div class="nav__language">
-            <span class="nav__language_flag"></span>
+        <div class="nav__language nav-item flex">
+            <span class="nav__language_flag flag-icon"></span>
             <span class="nav__language_down_arrow nav-down-arrow"></span>
         </div> <!-- nav_language -->
 
-        <div class="nav__signin">
+        <div class="nav__signin nav-item flex ">
             <div class="nav__signin_text nav-text">
                 Hello, Sign in <br> Account &amp; Lists
             </div>
             <span class="nav__signin_down_arrow nav-down-arrow"></span>
         </div> <!-- nav__signin -->
 
-        <div class="nav__orders">
+        <div class="nav__orders  nav-item flex">
             <div class="nav__orders_text nav-text">
                 Returns<br> &amp; Orders
             </div>
         </div> <!-- nav__orders -->
-        <div class="nav__cart">
-            <span class="nav__cart_icon">
+        <div class="nav__cart nav-item flex">
+            <span class="nav__cart_icon nav-icon">
                 <span class="nav__cart_count">0</span>
             </span>
             <span class="nav__cart_text">
@@ -112,6 +113,7 @@
         </div> <!-- nav__cart -->
 
     </div> <!-- nav -->
+
     <div class="container">
         <h1 class="label">working on it..</h1>
 
