@@ -7,6 +7,13 @@
 .nav-item {
     height: rem(50);
     padding: 0 rem(6) 0 rem(6);
+    outline: none;
+
+    &:focus{
+        
+        box-shadow: 0 0 0 3px var(--accent-active);
+
+    }
 }
 
 .flex {
@@ -19,7 +26,7 @@
     color: var(--text-light);
     font-weight: 700;
     padding-left: 3px;
-    font-size: rem(14);
+    font-size: var(--fs-400);
     line-height: 1.2;
     flex-shrink: 0;
     white-space: nowrap;
@@ -28,7 +35,7 @@
 
     &::first-line {
         color: var(--text-less-light);
-        font-size: rem(12);
+        font-size: var(--fs-300);
         font-weight: 400;
     }
 }
@@ -48,10 +55,12 @@
 .nav-icon {
     background: url(../assets/icons/icons.png);
 }
-.nav-focus{
+
+.nav-focus {
     box-shadow: 0 0 0 3px var(--accent-active);
 
 }
+
 .nav-hover {
     &> :not(:nth-child(3)):hover {
         border-radius: 1px;
@@ -65,11 +74,16 @@
 
 //========= main component =========//
 
+.nav-wrapper {
+    width: 100vw;
+    min-width: min-content;
+}
+
 .nav {
     height: rem(60);
     min-width: min-content;
-    width:100vw ;
-    padding: rem(5) rem(15) rem(5) rem(13);
+    width: 100vw;
+    padding: 0 rem(15) 0 rem(13);
     background-color: var(--nav-dark);
 
     &__logo {
@@ -86,6 +100,7 @@
 
 
         &_text {
+            font-size: var(--fs-400);
             color: var(--text-light);
             margin: -4px 4px 0 0;
         }
@@ -115,13 +130,13 @@
     &__search {
         width: auto;
         flex-grow: 1;
-        height: rem(40);       
+        height: rem(40);
         background-color: var(--light-bg);
         border-radius: rem(4);
         margin: 0 rem(15) 0 rem(15);
 
 
-      
+
         &_categories {
             height: rem(40);
             width: max-content;
@@ -145,7 +160,7 @@
             }
 
             &_selected_label {
-                font-size: rem(12);
+                font-size: var(--fs-300);
                 color: var(--categories-label);
 
 
@@ -191,9 +206,11 @@
             height: 40px;
             z-index: 100;
             border-radius: 0 rem(4) rem(4) 0;
-
             cursor: pointer;
+            &:hover{
+            background-color: var(--search-button-hover) ;
 
+            }
             &:focus {
                 box-shadow: 0 0 0 3px var(--accent-active);
 
@@ -225,13 +242,16 @@
 
         &_text {
             width: 13.7ch;
+
             &::first-line {
                 color: var(--text-light);
-              
+
             }
         }
 
-        &_down_arrow {}
+        &_down_arrow {
+            margin-right: 5px;
+        }
     }
 
 
@@ -239,10 +259,11 @@
 
 
         &_text {
-            width: 7.9ch;
+            width: 8ch;
+
             &::first-line {
                 color: var(--text-light);
-              
+
             }
         }
     }
@@ -255,6 +276,7 @@
             width: 38px;
             background-position: -10px -340px;
             position: relative;
+            margin-left: 5px;
 
         }
 
@@ -262,7 +284,7 @@
             position: absolute;
             color: var(--cart-count);
             font-weight: 700;
-            font-size: rem(16);
+            font-size: var(--fs-500);
             top: -5px;
             left: 17px;
 
@@ -273,9 +295,82 @@
             color: var(--text-light);
             font-weight: 700;
             padding-left: 3px;
-            font-size: rem(14);
+            font-size: var(--fs-400);
             margin-top: 10px;
+            margin-right: 5px;
 
+        }
+    }
+
+}
+
+.nav2 {
+    height: 40px;
+    background-color: var(--nav2-dark);
+    padding: 0 rem(15) 0 rem(10);
+    overflow: hidden;
+
+    &__side_menu {
+        padding: 7px 9px;
+        outline: none;
+
+        &:focus {
+            box-shadow: 0 0 0 3px var(--accent-active);
+
+        }
+
+
+        &:hover {
+            border-radius: 1px;
+            box-shadow: 0 0 0 1px var(--text-light);
+        }
+
+        &_icon {
+            width: 17px;
+            height: 14px;
+            background-position: -172px -255px;
+        }
+
+        &_text {
+            color: var(--text-light);
+            font-size: var(--fs-400);
+            font-weight: 700;
+            margin-left: 5px;
+        }
+
+    }
+
+    &__menu_list {
+        height: 100%;
+        flex-wrap: wrap;
+        overflow: hidden;
+        flex: 1 1 auto;
+        padding-left: 3px;
+
+
+
+        &_link {
+            display: inline-block;
+            color: var(--text-light);
+            font-size: var(--fs-400);
+            padding: 6px 9px;
+            margin: 5px 0 6px 0;
+            white-space: nowrap;
+            outline: none;
+
+            &--prime{
+                margin: 0 0 2px 0;
+            }
+
+            &:focus {
+                box-shadow: 0 0 0 3px var(--accent-active);
+
+            }
+
+            &:hover {
+                border-radius: 1px;
+                box-shadow: 0 0 0 1px var(--text-light);
+            }
         }
     }
 

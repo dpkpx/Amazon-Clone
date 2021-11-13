@@ -11,18 +11,25 @@ html{
 
 
 body{
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 14px;
+   
     width: max-content;
     min-height: 120vh;
+    background-color: var(--body-light-bg);
     
 }
+a{
+    text-decoration: none;
+}
 
+ul{
+    list-style: none;
+
+}
 .container{
     height: calc(100vh - 60px);
     display: grid;
     place-content: center;
-   
+   background-color: aqua;
     
 }
 
