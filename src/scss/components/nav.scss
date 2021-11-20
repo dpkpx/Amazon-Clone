@@ -9,7 +9,7 @@
     padding: 0 rem(6) 0 rem(6);
     outline: none;
 
-    &:focus{
+    &:focus-visible{
         
         box-shadow: 0 0 0 3px var(--accent-active);
 
@@ -75,15 +75,13 @@
 //========= main component =========//
 
 .nav-wrapper {
-    width: 100vw;
+    width: 100%;
     min-width: min-content;
 }
 
 .nav {
     height: rem(60);
-    min-width: min-content;
-    width: 100vw;
-    padding: 0 rem(15) 0 rem(13);
+    padding: 0 rem(0) 0 rem(13);
     background-color: var(--nav-dark);
 
     &__logo {
@@ -180,8 +178,8 @@
                 left: 0;
                 width: auto;
                 cursor: pointer;
-
-
+               
+               
 
             }
         }
@@ -314,7 +312,7 @@
         padding: 7px 9px;
         outline: none;
 
-        &:focus {
+        &:focus-visible {
             box-shadow: 0 0 0 3px var(--accent-active);
 
         }
@@ -362,7 +360,7 @@
                 margin: 0 0 2px 0;
             }
 
-            &:focus {
+            &:focus-visible {
                 box-shadow: 0 0 0 3px var(--accent-active);
 
             }

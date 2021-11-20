@@ -1,36 +1,40 @@
-
-html{
-    min-width: max-content;
+html {
+   
 }
 
-*,::after,::before{
+*,
+::after,
+::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 
-body{
-   
-    width: max-content;
-    min-height: 120vh;
+body {
+
+    min-width: 1029px;
+    min-height: 200vh;
     background-color: var(--body-light-bg);
-    
+
 }
-a{
+
+a {
     text-decoration: none;
 }
 
-ul{
+ul {
     list-style: none;
+   
 
 }
-.container{
+
+.container {
+    position: relative;
     height: calc(100vh - 60px);
     display: grid;
     place-content: center;
-   background-color: aqua;
-    
+    background-color: aqua;
+    z-index: 200;
+
 }
-
-

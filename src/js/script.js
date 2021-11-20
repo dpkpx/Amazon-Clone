@@ -1,3 +1,4 @@
+
 let searchInput = document.querySelector(".nav__search_text");
 
 searchInput.addEventListener("focusin",()=>{
