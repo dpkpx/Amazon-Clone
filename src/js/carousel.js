@@ -8,7 +8,7 @@ const dir = {
 //to auto slide 
 const intervalId = setInterval(moveSlide,5000,dir.next);
 
-// to remove auto slide
+// to remove auto sliding
 setTimeout(()=>{
     clearInterval(intervalId);
 },5000*carouselTrack.childElementCount);

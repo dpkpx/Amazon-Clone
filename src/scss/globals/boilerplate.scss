@@ -1,5 +1,5 @@
 html {
-   
+    min-width: min-content;
 }
 
 *,
@@ -12,11 +12,9 @@ html {
 
 
 body {
-
     min-width: 1029px;
     min-height: 200vh;
     background-color: var(--body-light-bg);
-
 }
 
 a {
@@ -29,12 +27,19 @@ ul {
 
 }
 
-.container {
+.card-container {
     position: relative;
     height: calc(100vh - 60px);
     display: grid;
     place-content: center;
-    background-color: aqua;
     z-index: 200;
+    margin-top: -350px;
+    border: 1px solid red;
 
+}
+
+.page-container{
+    max-width: 1500px;
+    margin: 0 auto;
+   
 }
