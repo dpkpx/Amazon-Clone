@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon-Clone</title>
     <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon">
-    <script defer src="./dist/script.js"></script>
-    <script defer src="./src/js/carousel.js"></script>
+    <script defer src="./dist/nav.js"></script>
+    <script defer src="./dist/carousel.js"></script>
     <link rel="stylesheet" href="./dist/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,7 @@
 
 <body>
 
-     <div class="nav-wrapper">
+    <div class="nav-wrapper">
         <div class="nav nav-hover flex">
             <a role="link" href="#" tabindex="0" class="nav__logo nav-item flex">
                 <span class="nav__logo_img nav-icon"></span>
@@ -198,17 +198,17 @@
             <button class="carousel__button carousel__button--prev"><span></span></button>
 
             <ul class="carousel__track" style=" transform: translate(-100%);">
-                <li class="carousel__track_slide"><img src="./assets/hero.jpg" alt="" class="carousel__track_slide_img">
-                </li>
-                <li class="carousel__track_slide"><img src="./assets/hero2.jpg" alt=""
+                <li class="carousel__track_slide"><img src="./assets/carousel-slides/hero1.jpg" alt="slide image"
                         class="carousel__track_slide_img"></li>
-                <li class="carousel__track_slide"><img src="./assets/hero3.jpg" alt=""
+                <li class="carousel__track_slide"><img src="./assets/carousel-slides/hero2.jpg" alt="slide image"
                         class="carousel__track_slide_img"></li>
-                <li class="carousel__track_slide"><img src="./assets/hero4.jpg" alt=""
+                <li class="carousel__track_slide"><img src="./assets/carousel-slides/hero3.jpg" alt="slide image"
                         class="carousel__track_slide_img"></li>
-                <li class="carousel__track_slide"><img src="./assets/hero5.jpg" alt=""
+                <li class="carousel__track_slide"><img src="./assets/carousel-slides/hero4.jpg" alt="slide image"
                         class="carousel__track_slide_img"></li>
-                <li class="carousel__track_slide"><img src="./assets/hero6.jpg" alt=""
+                <li class="carousel__track_slide"><img src="./assets/carousel-slides/hero5.jpg" alt="slide image"
+                        class="carousel__track_slide_img"></li>
+                <li class="carousel__track_slide"><img src="./assets/carousel-slides/hero6.jpg" alt="slide image"
                         class="carousel__track_slide_img"></li>
             </ul>
 
@@ -220,11 +220,89 @@
         <div class="card-container">
 
             <div class="card card--four-section">
+                <div class="card__header">
+                    <h2>Styles for Women | Up to 70% off</h2>
+                </div>
+                <div class="card__content">
+
+                    <a href="" class="card__link"><img src="../assets/women/women's-clothing.jpg" alt=""><span>Women's
+                            Clothing</span></a>
+                    <a href="" class="card__link"><img src="../assets/women/footwear+handbags.jpg" alt=""><span>Footwear
+                            Handbags</span></a>
+                    <a href="" class="card__link"><img src="../assets/women/watches.jpg" alt=""><span>Watches</span></a>
+                    <a href="" class="card__link"><img src="../assets/women/fashion-jewellery.jpg" alt=""><span>Fashion
+                            Jewellery</span></a>
+
+                </div>
+                <div class="card__bottom">
+                    <a href="">End of Season Sale</a>
+                </div>
 
             </div>
 
+            <div class="card card--four-section">
+                <div class="card__header">
+                    <h2>Styles for Men | Up to 70% off</h2>
+                </div>
+                <div class="card__content">
+
+                    <a href="" class="card__link"><img src="../assets/men/men's-clothing.jpg" alt=""><span>Men's
+                            Clothing</span></a>
+                    <a href="" class="card__link"><img src="../assets/men/footwear.jpg" alt=""><span>Footwear</span></a>
+                    <a href="" class="card__link"><img src="../assets/men/watches.jpg" alt=""><span>Watches</span></a>
+                    <a href="" class="card__link"><img src="../assets/men/bags.jpg" alt=""><span>Bags & Luggage</span></a>
+
+                </div>
+                <div class="card__bottom">
+                    <a href="">End of Season Sale</a>
+                </div>
+
+            </div>
+
+            <div class="card card--four-section">
+                <div class="card__header">
+                    <h2>Styles for Women | Up to 70% off</h2>
+                </div>
+                <div class="card__content">
+
+                    <a href="" class="card__link"><img src="../assets/women/women's-clothing.jpg" alt=""><span>Women's
+                            Clothing</span></a>
+                    <a href="" class="card__link"><img src="../assets/women/footwear+handbags.jpg" alt=""><span>Footwear
+                            Handbags</span></a>
+                    <a href="" class="card__link"><img src="../assets/women/watches.jpg" alt=""><span>Watches</span></a>
+                    <a href="" class="card__link"><img src="../assets/women/fashion-jewellery.jpg" alt=""><span>Fashion
+                            Jewellery</span></a>
+
+                </div>
+                <div class="card__bottom">
+                    <a href="">End of Season Sale</a>
+                </div>
+
+            </div>
+           
+            <div class="card card--four-section">
+                <div class="card__header">
+                    <h2>Styles for Men | Up to 70% off</h2>
+                </div>
+                <div class="card__content">
+
+                    <a href="" class="card__link"><img src="../assets/men/men's-clothing.jpg" alt=""><span>Men's
+                            Clothing</span></a>
+                    <a href="" class="card__link"><img src="../assets/men/footwear.jpg" alt=""><span>Footwear</span></a>
+                    <a href="" class="card__link"><img src="../assets/men/watches.jpg" alt=""><span>Watches</span></a>
+                    <a href="" class="card__link"><img src="../assets/men/bags.jpg" alt=""><span>Bags & Luggage</span></a>
+
+                </div>
+                <div class="card__bottom">
+                    <a href="">End of Season Sale</a>
+                </div>
+
+            </div>
+            <!-- <hr class="card-divider"> -->
+
+
         </div>
-    </div>
+    </div> <!-- page-container -->
 
 </body>
 

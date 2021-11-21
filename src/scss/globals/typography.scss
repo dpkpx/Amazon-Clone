@@ -3,6 +3,7 @@
     --fs-300:  0.75rem;
     --fs-400: 0.875rem;
     --fs-500:  1rem;
+    --fs-600:  1.3125rem;
 }
 
 
@@ -15,4 +16,7 @@ body{
 option{
     font-family: 'Ubuntu', sans-serif;
     
+}
+h2{
+    font-size: var(--fs-600);
 }

@@ -1,6 +1,6 @@
 html {
     min-width: min-content;
-    
+
 }
 
 *,
@@ -16,7 +16,7 @@ body {
     min-width: 1029px;
     min-height: 200vh;
     background-color: var(--body-light-bg);
-    zoom:-50%;
+    zoom: -50%;
 }
 
 a {
@@ -25,24 +25,22 @@ a {
 
 ul {
     list-style: none;
-   
+
 
 }
 
-.page-container{
+.page-container {
     max-width: 1500px;
     margin: 0 auto;
-   
+
 }
 
 .card-container {
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
-    height: calc(100vh - 60px);
     z-index: 200;
     margin-top: -350px;
-    border: 1px solid red;
-// display: flex;
     padding: 0 10px;
 
 }
-
