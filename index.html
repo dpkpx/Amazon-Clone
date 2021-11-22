@@ -8,7 +8,9 @@
     <title>Amazon-Clone</title>
     <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon">
     <script defer src="./dist/nav.js"></script>
+    <script defer src="./dist/card.js"></script>
     <script defer src="./dist/carousel.js"></script>
+    <script defer type="module" src="./dist/firebase.js"></script>
     <link rel="stylesheet" href="./dist/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -208,8 +210,7 @@
                         class="carousel__track_slide_img"></li>
                 <li class="carousel__track_slide"><img src="./assets/carousel-slides/hero5.jpg" alt="slide image"
                         class="carousel__track_slide_img"></li>
-                <li class="carousel__track_slide"><img src="./assets/carousel-slides/hero6.jpg" alt="slide image"
-                        class="carousel__track_slide_img"></li>
+
             </ul>
 
             <button class="carousel__button carousel__button--next"><span></span></button>
@@ -240,48 +241,101 @@
 
             </div>
 
-            <div class="card card--four-section">
-                <div class="card__header">
-                    <h2>Styles for Men | Up to 70% off</h2>
-                </div>
-                <div class="card__content">
-
-                    <a href="" class="card__link"><img src="./assets/men/men's-clothing.jpg" alt=""><span>Men's
-                            Clothing</span></a>
-                    <a href="" class="card__link"><img src="./assets/men/footwear.jpg" alt=""><span>Footwear</span></a>
-                    <a href="" class="card__link"><img src="./assets/men/watches.jpg" alt=""><span>Watches</span></a>
-                    <a href="" class="card__link"><img src="./assets/men/bags.jpg" alt=""><span>Bags & Luggage</span></a>
-
-                </div>
-                <div class="card__bottom">
-                    <a href="">End of Season Sale</a>
-                </div>
-
-            </div>
-
-            <div class="card card--four-section">
-                <div class="card__header">
-                    <h2>Styles for Women | Up to 70% off</h2>
-                </div>
-                <div class="card__content">
-
-                    <a href="" class="card__link"><img src="./assets/women/women's-clothing.jpg" alt=""><span>Women's
-                            Clothing</span></a>
-                    <a href="" class="card__link"><img src="./assets/women/footwear+handbags.jpg" alt=""><span>Footwear
-                            Handbags</span></a>
-                    <a href="" class="card__link"><img src="./assets/women/watches.jpg" alt=""><span>Watches</span></a>
-                    <a href="" class="card__link"><img src="./assets/women/fashion-jewellery.jpg" alt=""><span>Fashion
-                            Jewellery</span></a>
-
-                </div>
-                <div class="card__bottom">
-                    <a href="">End of Season Sale</a>
-                </div>
-
-            </div>
            
             <div class="card card--four-section">
                 <div class="card__header">
+                    <h2>Top rated, premium quality | Amazon Brands & more</h2>
+                </div>
+                <div class="card__content">
+
+                    <a href="" class="card__link"><img src="./assets/top_rated/bedsheet.jpg" alt=""><span>Home products</span></a>
+                    <a href="" class="card__link"><img src="./assets/top_rated/furniture.jpg" alt=""><span>Furniture</span></a>
+                    <a href="" class="card__link"><img src="./assets/top_rated/daily_essential.jpg" alt=""><span>Daily essential</span></a>
+                    <a href="" class="card__link"><img src="./assets/top_rated/clothing_essential.jpg" alt=""><span>Clothing essential</span></a>
+
+                </div>
+                <div class="card__bottom">
+                    <a href="">See more</a>
+                </div>
+
+            </div>
+
+            <div class="card card--four-section">
+                <div class="card__header">
+                    <h2>Now save bill details & get timely reminders</h2>
+                </div>
+                <div class="card__content">
+
+                    <a href="" class="card__link"><img src="./assets/recharge&bills/Postpaid.jpg" alt=""><span>Postpaid
+                            bills</span></a>
+                    <a href="" class="card__link"><img src="./assets/recharge&bills/LPG.jpg" alt=""><span>LPG gas
+                            cylinder</span></a>
+                    <a href="" class="card__link"><img src="./assets/recharge&bills/Credit_card.jpg" alt=""><span>Credit
+                            card bills</span></a>
+                    <a href="" class="card__link"><img src="./assets/recharge&bills/GPRC.jpg" alt=""><span>Google play
+                            recharge</span></a>
+
+                </div>
+                <div class="card__bottom">
+                    <a href="">See more</a>
+                </div>
+
+            </div>
+
+            <div class="card card--signin">
+                <div class="card__header">
+                    <h2>Sign in for your best experience</h2>
+                </div>
+
+                <div class="card__bottom">
+                    <a href="">Sign in securely</a>
+                </div>
+
+            </div>
+
+            <hr class="card-divider card-divider--1">
+            <hr class="card-divider card-divider--2">
+
+            <div class="card card--four-section">
+                <div class="card__header">
+                    <h2>Bill payments got fast & convenient</h2>
+                </div>
+                <div class="card__content">
+
+                    <a href="" class="card__link"><img src="./assets/recharge&bills/Recharge_prepaid.jpg" alt=""><span>Prepaid recharge</span></a>
+                    <a href="" class="card__link"><img src="./assets/recharge&bills/Electricity.jpg" alt=""><span>Electricity bills</span></a>
+                    <a href="" class="card__link"><img src="./assets/recharge&bills/DTH.jpg" alt=""><span>DTH recharge</span></a>
+                    <a href="" class="card__link"><img src="./assets/recharge&bills/Broadband.jpg" alt=""><span>Broadband bills</span></a>
+
+                </div>
+                <div class="card__bottom">
+                    <a href="">See more</a>
+                </div>
+
+            </div>
+
+            <div class="card card--four-section">
+                <div class="card__header">
+                    <h2>Upgrade your home | Amazon Brands & more</h2>
+                </div>
+                <div class="card__content">
+
+                    <a href="" class="card__link"><img src="./assets/appliances/tvs.jpg" alt=""><span>Smart LED TVs</span></a>
+                    <a href="" class="card__link"><img src="./assets/appliances/appliances.jpg" alt=""><span>Appliances</span></a>
+                    <a href="" class="card__link"><img src="./assets/appliances/furniture.jpg" alt=""><span>Furniture</span></a>
+                    <a href="" class="card__link"><img src="./assets/appliances/kitchen.jpg" alt=""><span>Kitchen products</span></a>
+
+                </div>
+                <div class="card__bottom">
+                    <a href="">See more</a>
+                </div>
+
+            </div>
+
+            
+
+            <div class="card card--four-section">
+                <div class="card__header">
                     <h2>Styles for Men | Up to 70% off</h2>
                 </div>
                 <div class="card__content">
@@ -290,7 +344,8 @@
                             Clothing</span></a>
                     <a href="" class="card__link"><img src="./assets/men/footwear.jpg" alt=""><span>Footwear</span></a>
                     <a href="" class="card__link"><img src="./assets/men/watches.jpg" alt=""><span>Watches</span></a>
-                    <a href="" class="card__link"><img src="./assets/men/bags.jpg" alt=""><span>Bags & Luggage</span></a>
+                    <a href="" class="card__link"><img src="./assets/men/bags.jpg" alt=""><span>Bags &
+                            Luggage</span></a>
 
                 </div>
                 <div class="card__bottom">
@@ -298,7 +353,44 @@
                 </div>
 
             </div>
-            <!-- <hr class="card-divider"> -->
+
+            <div class="card card--four-section replacer" style="display: none;">
+                <div class="card__header">
+                    <h2>Shop by Category</h2>
+                </div>
+                <div class="card__content">
+
+                    <a href="" class="card__link"><img src="./assets/category/Fresh.jpg" alt=""><span>Fresh</span></a>
+                    <a href="" class="card__link"><img src="./assets/category/Mobile.jpg" alt=""><span>Mobiles</span></a>
+                    <a href="" class="card__link"><img src="./assets/category/Electronic.jpg" alt=""><span>Electronics</span></a>
+                    <a href="" class="card__link"><img src="./assets/category/Fashion.jpg" alt=""><span>Fashion</span></a>
+
+                </div>
+                <div class="card__bottom">
+                    <a href="">See more</a>
+                </div>
+
+            </div>
+
+            <div class="card card--four-section" >
+                <div class="card__header">
+                    <h2>Electronics devices for home office</h2>
+                </div>
+                <div class="card__content">
+
+                    <a href="" class="card__link"><img src="./assets/electronic_devices/smartwatches.jpg" alt=""><span>Smartwatches & fitness trackers</span></a>
+                    <a href="" class="card__link"><img src="./assets/electronic_devices/tablets.jpg" alt=""><span>Tablets</span></a>
+                    <a href="" class="card__link"><img src="./assets/electronic_devices/laptops.jpg" alt=""><span>Laptops</span></a>
+                    <a href="" class="card__link"><img src="./assets/electronic_devices/monitors.jpg" alt=""><span>Monitors</span></a>
+
+                </div>
+                <div class="card__bottom">
+                    <a href="">See more</a>
+                </div>
+
+            </div>
+
+           
 
 
         </div>
