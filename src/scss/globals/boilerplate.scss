@@ -13,10 +13,10 @@ html {
 
 
 body {
-    min-width: 1029px;
-    min-height: 200vh;
+    position: relative;
+    min-width: 1024px;
     background-color: var(--body-light-bg);
-    zoom: -50%;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -35,12 +35,28 @@ ul {
 
 }
 
-.card-container {
+.card-container-1 {
     display: flex;
     flex-wrap: wrap;
     position: relative;
     z-index: 200;
     margin-top: -350px;
     padding: 0 10px;
+
+}
+
+.card-container-2 {
+    width: 100%;
+    position: relative;
+    padding: 0 20px;
+
+}
+.card-container-3 {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 10px;
+    overflow: hidden;
+    height: 420px;
 
 }

@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,">
     <title>Amazon-Clone</title>
     <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon">
     <script defer src="./dist/nav.js"></script>
-    <script defer src="./dist/card.js"></script>
+    <script defer src="./dist/cardArrenger.js"></script>
     <script defer src="./dist/carousel.js"></script>
+    <script defer src="./dist/cardWide.js"></script>
     <script defer type="module" src="./dist/firebase.js"></script>
     <link rel="stylesheet" href="./dist/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,7 +31,8 @@
             <div tabindex="0" class="nav__location nav-item flex">
                 <div class="nav__location_logo nav-icon"></div>
                 <div class="nav__location_text nav-text">
-                    Hello <br> Select your address
+                    <p>Hello</p>
+                    <p>Select your address</p>
                 </div>
             </div> <!-- nav__location -->
 
@@ -97,14 +99,16 @@
 
             <a tabindex="0" href="#" class="nav__signin nav-item flex ">
                 <div class="nav__signin_text nav-text">
-                    Hello, Sign in <br> Account &amp; Lists
+                    <p> Hello, Sign in</p>
+                    <p>Account &amp; Lists</p>
                 </div>
                 <span class="nav__signin_down_arrow nav-down-arrow"></span>
             </a> <!-- nav__signin -->
 
             <a tabindex="0" href="#" class="nav__orders  nav-item flex">
                 <div class="nav__orders_text nav-text">
-                    Returns<br> &amp; Orders
+                    <p>Returns</p>
+                    <p>&amp; Orders</p>
                 </div>
             </a> <!-- nav__orders -->
             <a tabindex="0" href="#" class="nav__cart nav-item flex">
@@ -218,7 +222,7 @@
 
         </div>
 
-        <div class="card-container">
+        <div class="card-container-1">
 
             <div class="card card--four-section">
                 <div class="card__header">
@@ -241,24 +245,22 @@
 
             </div>
 
-           
-            <div class="card card--four-section">
+            <div class="card card--single">
                 <div class="card__header">
-                    <h2>Top rated, premium quality | Amazon Brands & more</h2>
+                    <h2>Pay your credit card bills on Amazon</h2>
                 </div>
                 <div class="card__content">
 
-                    <a href="" class="card__link"><img src="./assets/top_rated/bedsheet.jpg" alt=""><span>Home products</span></a>
-                    <a href="" class="card__link"><img src="./assets/top_rated/furniture.jpg" alt=""><span>Furniture</span></a>
-                    <a href="" class="card__link"><img src="./assets/top_rated/daily_essential.jpg" alt=""><span>Daily essential</span></a>
-                    <a href="" class="card__link"><img src="./assets/top_rated/clothing_essential.jpg" alt=""><span>Clothing essential</span></a>
+                    <a href="" class="card__link"><img src="./assets/single_cards/payCreditCardBills.jpg" alt=""></a>
+
 
                 </div>
                 <div class="card__bottom">
-                    <a href="">See more</a>
+                    <a href="">Pay now</a>
                 </div>
 
             </div>
+
 
             <div class="card card--four-section">
                 <div class="card__header">
@@ -302,10 +304,14 @@
                 </div>
                 <div class="card__content">
 
-                    <a href="" class="card__link"><img src="./assets/recharge&bills/Recharge_prepaid.jpg" alt=""><span>Prepaid recharge</span></a>
-                    <a href="" class="card__link"><img src="./assets/recharge&bills/Electricity.jpg" alt=""><span>Electricity bills</span></a>
-                    <a href="" class="card__link"><img src="./assets/recharge&bills/DTH.jpg" alt=""><span>DTH recharge</span></a>
-                    <a href="" class="card__link"><img src="./assets/recharge&bills/Broadband.jpg" alt=""><span>Broadband bills</span></a>
+                    <a href="" class="card__link"><img src="./assets/recharge&bills/Recharge_prepaid.jpg"
+                            alt=""><span>Prepaid recharge</span></a>
+                    <a href="" class="card__link"><img src="./assets/recharge&bills/Electricity.jpg"
+                            alt=""><span>Electricity bills</span></a>
+                    <a href="" class="card__link"><img src="./assets/recharge&bills/DTH.jpg" alt=""><span>DTH
+                            recharge</span></a>
+                    <a href="" class="card__link"><img src="./assets/recharge&bills/Broadband.jpg"
+                            alt=""><span>Broadband bills</span></a>
 
                 </div>
                 <div class="card__bottom">
@@ -320,10 +326,14 @@
                 </div>
                 <div class="card__content">
 
-                    <a href="" class="card__link"><img src="./assets/appliances/tvs.jpg" alt=""><span>Smart LED TVs</span></a>
-                    <a href="" class="card__link"><img src="./assets/appliances/appliances.jpg" alt=""><span>Appliances</span></a>
-                    <a href="" class="card__link"><img src="./assets/appliances/furniture.jpg" alt=""><span>Furniture</span></a>
-                    <a href="" class="card__link"><img src="./assets/appliances/kitchen.jpg" alt=""><span>Kitchen products</span></a>
+                    <a href="" class="card__link"><img src="./assets/appliances/tvs.jpg" alt=""><span>Smart LED
+                            TVs</span></a>
+                    <a href="" class="card__link"><img src="./assets/appliances/appliances.jpg"
+                            alt=""><span>Appliances</span></a>
+                    <a href="" class="card__link"><img src="./assets/appliances/furniture.jpg"
+                            alt=""><span>Furniture</span></a>
+                    <a href="" class="card__link"><img src="./assets/appliances/kitchen.jpg" alt=""><span>Kitchen
+                            products</span></a>
 
                 </div>
                 <div class="card__bottom">
@@ -331,8 +341,6 @@
                 </div>
 
             </div>
-
-            
 
             <div class="card card--four-section">
                 <div class="card__header">
@@ -354,16 +362,19 @@
 
             </div>
 
-            <div class="card card--four-section replacer" style="display: none;">
+            <div class="card card--four-section card-replacer" style="display: none;">
                 <div class="card__header">
                     <h2>Shop by Category</h2>
                 </div>
                 <div class="card__content">
 
                     <a href="" class="card__link"><img src="./assets/category/Fresh.jpg" alt=""><span>Fresh</span></a>
-                    <a href="" class="card__link"><img src="./assets/category/Mobile.jpg" alt=""><span>Mobiles</span></a>
-                    <a href="" class="card__link"><img src="./assets/category/Electronic.jpg" alt=""><span>Electronics</span></a>
-                    <a href="" class="card__link"><img src="./assets/category/Fashion.jpg" alt=""><span>Fashion</span></a>
+                    <a href="" class="card__link"><img src="./assets/category/Mobile.jpg"
+                            alt=""><span>Mobiles</span></a>
+                    <a href="" class="card__link"><img src="./assets/category/Electronic.jpg"
+                            alt=""><span>Electronics</span></a>
+                    <a href="" class="card__link"><img src="./assets/category/Fashion.jpg"
+                            alt=""><span>Fashion</span></a>
 
                 </div>
                 <div class="card__bottom">
@@ -372,16 +383,20 @@
 
             </div>
 
-            <div class="card card--four-section" >
+            <div class="card card--four-section">
                 <div class="card__header">
                     <h2>Electronics devices for home office</h2>
                 </div>
                 <div class="card__content">
 
-                    <a href="" class="card__link"><img src="./assets/electronic_devices/smartwatches.jpg" alt=""><span>Smartwatches & fitness trackers</span></a>
-                    <a href="" class="card__link"><img src="./assets/electronic_devices/tablets.jpg" alt=""><span>Tablets</span></a>
-                    <a href="" class="card__link"><img src="./assets/electronic_devices/laptops.jpg" alt=""><span>Laptops</span></a>
-                    <a href="" class="card__link"><img src="./assets/electronic_devices/monitors.jpg" alt=""><span>Monitors</span></a>
+                    <a href="" class="card__link"><img src="./assets/electronic_devices/smartwatches.jpg"
+                            alt=""><span>Smartwatches & fitness trackers</span></a>
+                    <a href="" class="card__link"><img src="./assets/electronic_devices/tablets.jpg"
+                            alt=""><span>Tablets</span></a>
+                    <a href="" class="card__link"><img src="./assets/electronic_devices/laptops.jpg"
+                            alt=""><span>Laptops</span></a>
+                    <a href="" class="card__link"><img src="./assets/electronic_devices/monitors.jpg"
+                            alt=""><span>Monitors</span></a>
 
                 </div>
                 <div class="card__bottom">
@@ -390,11 +405,208 @@
 
             </div>
 
-           
-
 
         </div>
+
+        <hr class="card-divider card-container-divider-2">
+
+        <div class="card-container-2">
+            <div class="card-wide">
+                <div class="card-wide__header">
+                    <h2>Up to 65% off | Refurbished laptops </h2>
+                    <a href="#">See more</a>
+                </div>
+                <div class="card-wide__carousel">
+
+                    <button class="card-wide__carousel-button card-wide__carousel-button--prev"><span></span></button>
+
+                    <ul class="card-wide__carousel-track" style="transform: translate(0px);">
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_laptops/1.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_laptops/2.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_laptops/3.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_laptops/4.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_laptops/5.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_laptops/6.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_laptops/7.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_laptops/8.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_laptops/9.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_laptops/10.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_laptops/11.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_laptops/12.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_laptops/13.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_laptops/14.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_laptops/15.jpg" alt="" class="card-wide__image"></a></li>
+                    </ul>
+
+                    <button class="card-wide__carousel-button card-wide__carousel-button--next"><span></span></button>
+
+                </div>
+                <div class="card-wide__scrollbar">
+                    <span class="card-wide__scrollbar-thumb"></span>
+                </div>
+
+
+            </div>
+        <hr class="card-divider card-container-divider-2">
+            
+            <div class="card-wide">
+                <div class="card-wide__header">
+                    <h2>More everyday essentials to explore</h2>
+                    <a href="#">See more</a>
+                </div>
+                <div class="card-wide__carousel">
+
+                    <button class="card-wide__carousel-button card-wide__carousel-button--prev"><span></span></button>
+
+                    <ul class="card-wide__carousel-track" style="transform: translate(0px);">
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_essentials/1.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_essentials/2.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_essentials/3.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_essentials/4.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_essentials/5.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_essentials/6.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_essentials/7.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_essentials/8.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_essentials/9.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_essentials/10.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_essentials/11.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_essentials/12.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_essentials/13.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_essentials/14.jpg" alt="" class="card-wide__image"></a></li>
+                        <li class="card-wide__slide"><a href="#" class="card-wide__link"><img
+                                    src="./assets/long_card_essentials/15.jpg" alt="" class="card-wide__image"></a></li>
+                    </ul>
+
+                    <button class="card-wide__carousel-button card-wide__carousel-button--next"><span></span></button>
+
+                </div>
+                <div class="card-wide__scrollbar">
+                    <span class="card-wide__scrollbar-thumb"></span>
+                </div>
+
+
+            </div>
+        </div>
+
+        <hr class="card-divider card-container-divider-2">
+
+        <div class="card-container-3">
+
+
+            <div class="card card--four-section">
+                <div class="card__header">
+                    <h2>Top rated, premium quality | Amazon Brands & more</h2>
+                </div>
+                <div class="card__content">
+
+                    <a href="" class="card__link"><img src="./assets/top_rated/bedsheet.jpg" alt=""><span>Home
+                            products</span></a>
+                    <a href="" class="card__link"><img src="./assets/top_rated/furniture.jpg"
+                            alt=""><span>Furniture</span></a>
+                    <a href="" class="card__link"><img src="./assets/top_rated/daily_essential.jpg" alt=""><span>Daily
+                            essential</span></a>
+                    <a href="" class="card__link"><img src="./assets/top_rated/clothing_essential.jpg"
+                            alt=""><span>Clothing essential</span></a>
+
+                </div>
+                <div class="card__bottom">
+                    <a href="">See more</a>
+                </div>
+
+            </div>
+
+
+            <div class="card card--single">
+                <div class="card__header">
+                    <h2>Up to 60% off | Fitness essentials to set up your ...</h2>
+                </div>
+                <div class="card__content">
+
+                    <a href="" class="card__link"><img src="./assets/single_cards/fitness.jpg" alt=""></a>
+
+
+                </div>
+                <div class="card__bottom">
+                    <a href="">See more</a>
+                </div>
+
+            </div>
+
+            <div class="card card--single">
+                <div class="card__header">
+                    <h2>Value Packs under ₹599 | Amazon Brands & more</h2>
+                </div>
+                <div class="card__content">
+
+                    <a href="" class="card__link"><img src="./assets/single_cards/shirts.jpg" alt=""></a>
+
+
+                </div>
+                <div class="card__bottom">
+                    <a href="">See all</a>
+                </div>
+
+            </div>
+
+            <div class="card card--single">
+                <div class="card__header">
+                    <h2>Up to 50% off | Garden & outdoor</h2>
+                </div>
+                <div class="card__content">
+
+                    <a href="" class="card__link"><img src="./assets/single_cards/garden.jpg" alt=""></a>
+
+
+                </div>
+                <div class="card__bottom">
+                    <a href="">See more</a>
+                </div>
+
+            </div>
+
+        </div>
+        <hr class="card-divider card-container-divider-2">
+
+       
+
     </div> <!-- page-container -->
+    <div class="footer-wrapper">
+
+        <footer>
+            <span>footer</span>
+        </footer>
+
+    </div> <!-- footer-wrapper -->
+
 
 </body>
 

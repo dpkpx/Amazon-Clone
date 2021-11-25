@@ -16,7 +16,7 @@
     &--signin {
         height: max-content;
 
-        & .card__bottom{
+        & .card__bottom {
 
             position: static;
             padding: 0;
@@ -24,17 +24,34 @@
             border-radius: 8px;
             overflow: hidden;
 
-            & a{
+            & a {
                 display: block;
-                background-color:var(--card-signin-button);
+                background-color: var(--card-signin-button);
                 width: 100%;
                 padding: 10px;
                 text-align: center;
                 color: var(--card-text-small);
-                &:hover{
-                background-color:var(--card-signin-button-active);
+
+                &:hover {
+                    background-color: var(--card-signin-button-active);
 
                 }
+            }
+        }
+    }
+
+    &--single {
+        & .card__content {
+            display: block;
+
+        }
+
+        & .card__link {
+
+            & img {
+                width: 100%;
+                height: calc(100% - 10px);
+                object-fit: cover;
             }
         }
     }
@@ -65,6 +82,7 @@
     }
 
     &__link {
+        min-height: 130.2px;
 
         & img {
             width: 100%;
@@ -90,6 +108,143 @@
         & a {
             font-size: 13px;
             color: var(--card-link);
+
+        }
+    }
+}
+
+.card-wide {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    background-color: var(--card-bg);
+
+    &:hover :is(.card-wide__carousel-button,.card-wide__scrollbar-thumb) {
+        opacity: 1;
+
+    }
+
+    &:not(:hover) .card-wide__carousel-button {
+
+        opacity: 0 !important;
+
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        & h2 {
+            color: var(--card-wide-header);
+            font-weight: 400;
+        }
+
+        & a {
+            margin-left: 20px;
+        }
+    }
+
+    &__carousel {
+        width: 100%;
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+
+        &-button {
+            opacity: 0;
+            position: absolute;
+            height: 100px;
+            width: 45px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: var(--card-bg);
+            z-index: 100;
+            border: none;
+            outline: none;
+            transition: opacity 0.3s ease-in;
+
+
+            &:focus {
+                outline: 5px auto var(--card-link);
+                outline-offset: -2px;
+            }
+
+            & span {
+                display: block;
+                width: 13px;
+                height: 22px;
+                margin: auto;
+                background: url(../assets/icons/cardMedia.png);
+                background-repeat: no-repeat;
+            }
+
+            &--prev {
+                left: 0;
+                border-radius: 0 5px 5px 0;
+
+                & span {
+
+                    background-position: -14px 0;
+
+                }
+
+            }
+
+            &--next {
+
+                right: 0;
+                border-radius: 5px 0 0 5px;
+
+
+                & span {
+
+                    background-position: 0 0;
+
+                }
+
+            }
+        }
+
+        &-track {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-wrap: nowrap;
+            transition: all 0.5s ease-in;
+        }
+
+    }
+
+    &__slide {
+        margin-right: 30px;
+    }
+
+    &__scrollbar {
+        position: relative;
+        margin-bottom: -10px;
+        margin-top: 20px;
+        width: 100%;
+        height: 6px;
+
+        &-thumb {
+            position: absolute;
+            content: "";
+            width: 300px;
+            height: 6px;
+            left: 0;
+            background-color: var(--card-scrollbar-thumb);
+            border-radius: 6px;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease-in;
+
+            &:hover {
+
+                background-color: var(--card-scrollbar-thumb-hover);
+
+            }
 
         }
     }
