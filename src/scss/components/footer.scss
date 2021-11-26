@@ -1,29 +1,154 @@
-@use "../globals/colours.scss" as *;
+@use "../globals/colours.scss"as *;
+@use "../globals/typography.scss"as *;
 
 .footer-wrapper {
     width: 100%;
     min-width: min-content;
     background-color: var(--footer-bg);
-    height: 50vh;
+    min-height: 50vh;
+    padding: 1px;
 }
 
-.footer{
-    &__backToTop{
+.footer {
+    &__backToTop {
 
-        & a{
+        & a {
             display: block;
             width: 100%;
             height: 50px;
+            font-size: var(--fs-400);
             color: var(--text-light);
             background-color: var(--back-to-top-bg);
             text-align: center;
             line-height: 50px;
 
-            &:hover{
-            background-color: var(--back-to-top-bg-hover);
+            &:hover {
+                background-color: var(--back-to-top-bg-hover);
 
             }
-            
+
+        }
+    }
+
+    &__divider {
+        border: none;
+        border-top: 1px solid var(--back-to-top-bg);
+    }
+
+    &__linksSection {
+        display: flex;
+        gap: 125px;
+        width: max-content;
+        margin: 40px auto;
+
+
+    }
+
+    &__linksContainer {
+
+
+        & a {
+            display: block;
+            color: var(--text-less-light);
+            font-size: var(--fs-400);
+            margin-bottom: 10px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__linksHeader {
+
+        font-size: var(--fs-500);
+        color: var(--text-light);
+        font-weight: 700;
+        margin-block: 6px 14px;
+
+
+    }
+
+    &__language {
+        display: flex;
+        height: 70px;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+
+
+        & .homepage {
+        cursor: pointer;
+
+            width: 76px;
+            height: 23px;
+            margin-top: 10px;
+            margin-right: 100px;
+            background: url(../assets/icons/icons.png);
+            background-position: -10px -90px;
+        }
+
+        & .language {
+        cursor: pointer;
+
+            display: flex;
+            align-items: center;
+            padding: 8px 8px;
+            border: 1px solid var(--back-to-top-bg-hover);
+            border-radius: 3px;
+
+            & .globeIcon {
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                background: url(../assets/icons/flags.png);
+                background-position: -77px -24px;
+
+            }
+
+            & .txt {
+                margin-inline: 10px 20px;
+
+                color: var(--text-less-light);
+                font-size: var(--fs-350);
+            }
+
+            & .upDownIcon {
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                background: url(../assets/icons/flags.png);
+                background-position: -77px -80px;
+
+            }
+        }
+    }
+
+    &__regions {
+        max-width: 1000px;
+        margin: 10px auto 30px  auto;
+
+        & ul {
+            display:inline-block;
+            max-width: 1000px;
+            text-align: center;
+            & li {
+                display: inline-block;
+
+                & a {
+
+                    color: var(--text-less-light);
+                    font-size: var(--fs-300);
+                    padding: 0 8px;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+
+                }
+            }
+
+
         }
     }
 }
