@@ -16,14 +16,11 @@ let duplicate = carouselTrack.children[0].cloneNode(true);
 duplicate.classList.add("duplicate");
 carouselTrack.append(duplicate);
 
-
-
 //arrenging the slides
 for (let i = 0; i < carouselTrack.childElementCount; i++) {
     carouselTrack.children[i].style = "left:" + i * 100 + "%";
 
 }
-
 
 //repositioning the slide on edge cases with transition off
 carouselTrack.addEventListener("transitionend", () => {

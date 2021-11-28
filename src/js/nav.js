@@ -10,8 +10,11 @@ new IntersectionObserver((entry) => {
 
     if (!entry[0].isIntersecting) {
 
-        entry[0].target.style = "position:fixed;top:0;"
+        if (window.visualViewport.width >= 1024 || window.screen.availWidth - window.visualViewport.width < 50) {
+           
+            entry[0].target.style = "position:fixed;top:0;"
 
+        }
     }
 
 }).observe(navbar);

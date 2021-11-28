@@ -36,20 +36,18 @@ cardWide.forEach((cardWide) => {
         carouselScrollbar.style.transition = "";
 
         document.addEventListener("mousemove", moveThumbCallback);
-        document.addEventListener("mouseup", removeEventListeners);
+        document.addEventListener("mouseup", reset,{once:true});
 
 
         function moveThumbCallback(e) {
             movethumb(carouselScrollbar, cardCarouselTrack, e);
         };
 
-        function removeEventListeners() {
+        function reset() {
             carouselScrollbar.style.opacity = "";
             cardCarouselTrack.style.transition = "";
 
             document.removeEventListener("mousemove", moveThumbCallback);
-            document.removeEventListener("mouseup", removeEventListeners);
-
         }
 
         

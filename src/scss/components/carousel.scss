@@ -27,7 +27,7 @@
         border: none;
 
         &:focus{
-            box-shadow: inset 0 0 0 2px #fff, inset 0 0 0 4px #008296;
+            box-shadow: inset 0 0 0 2px var(--light-bg), inset 0 0 0 4px hsl(188, 100%, 29%);
         }
 
         & span {

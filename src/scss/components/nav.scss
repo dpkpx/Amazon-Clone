@@ -80,6 +80,7 @@
 }
 
 .nav {
+    position: relative;
     height: rem(60);
     padding: 0 rem(10) 0 rem(12);
     background-color: var(--nav-dark);
