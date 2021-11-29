@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Product</title>
+    <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon">
+    <script defer src="./dist/nav.js"></script>
+    <script defer type="module" src="./dist/firebase.js"></script>
+    <link rel="stylesheet" href="./dist/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="nav-wrapper" id="navTop">
+        <div class="nav nav-hover flex">
+
+            <a role="link" href="./" tabindex="0" class="nav__logo nav-item flex">
+                <span class="nav__logo_img nav-icon"></span>
+                <span class="nav__logo_text">.in</span>
+            </a> <!-- nav__logo -->
+
+            <div tabindex="0" class="nav__location nav-item flex">
+                <div class="nav__location_logo nav-icon"></div>
+                <div class="nav__location_text nav-text">
+                    <p>Hello</p>
+                    <p>Select your address</p>
+                </div>
+            </div> <!-- nav__location -->
+
+            <div class="nav__search flex">
+                <div class="nav__search_categories flex">
+                    <span class="nav__search_categories_selected_label" id="selected_categories">All</span>
+                    <i class="nav__search_categories_selected_down_arrow nav-down-arrow"></i>
+                    <select class="nav__search_categories_list" id="categories">
+                        <option selected="selected" value="aps">All Categories</option>
+                        <option value="todays-deals">Deals</option>
+                        <option value="alexa-skills">Alexa Skills</option>
+                        <option value="amazon-devices">Amazon Devices</option>
+                        <option value="fashion">Amazon Fashion</option>
+                        <option value="pantry">Amazon Pantry</option>
+                        <option value="appliances">Appliances</option>
+                        <option value="mobile-apps">Apps &amp; Games</option>
+                        <option value="baby">Baby</option>
+                        <option value="beauty">Beauty</option>
+                        <option value="stripbooks">Books</option>
+                        <option value="automotive">Car &amp; Motorbike</option>
+                        <option value="apparel">Clothing &amp; Accessories</option>
+                        <option value="collectibles">Collectibles</option>
+                        <option value="computers">Computers &amp; Accessories</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="furniture">Furniture</option>
+                        <option value="lawngarden">Garden &amp; Outdoors</option>
+                        <option value="gift-cards">Gift Cards</option>
+                        <option value="grocery">Grocery &amp; Gourmet Foods</option>
+                        <option value="hpc">Health &amp; Personal Care</option>
+                        <option value="kitchen">Home &amp; Kitchen</option>
+                        <option value="industrial">Industrial &amp; Scientific</option>
+                        <option value="jewelry">Jewellery</option>
+                        <option value="digital-text">Kindle Store</option>
+                        <option value="luggage">Luggage &amp; Bags</option>
+                        <option value="luxury-beauty">Luxury Beauty</option>
+                        <option value="dvd">Movies &amp; TV Shows</option>
+                        <option value="popular">Music</option>
+                        <option value="mi">Musical Instruments</option>
+                        <option value="office-products">Office Products</option>
+                        <option value="pets">Pet Supplies</option>
+                        <option value="instant-video">Prime Video</option>
+                        <option value="shoes">Shoes &amp; Handbags</option>
+                        <option value="software">Software</option>
+                        <option value="sporting">Sports, Fitness &amp; Outdoors</option>
+                        <option value="home-improvement">Tools &amp; Home Improvement</option>
+                        <option value="toys">Toys &amp; Games</option>
+                        <option value="under-ten-dollars">Under ₹500</option>
+                        <option value="videogames">Video Games</option>
+                        <option value="watches">Watches</option>
+                    </select>
+                </div>
+
+                <input type="text" class="nav__search_text">
+
+
+                <button class="nav__search_button nav-icon" type="submit"></button>
+
+            </div><!-- nav__search -->
+
+            <a tabindex="0" href="#" class="nav__language nav-item flex">
+                <span class="nav__language_flag flag-icon"></span>
+                <span class="nav__language_down_arrow nav-down-arrow"></span>
+            </a> <!-- nav_language -->
+
+            <a tabindex="0" href="#" class="nav__signin nav-item flex ">
+                <div class="nav__signin_text nav-text">
+                    <p> Hello, Sign in</p>
+                    <p>Account &amp; Lists</p>
+                </div>
+                <span class="nav__signin_down_arrow nav-down-arrow"></span>
+            </a> <!-- nav__signin -->
+
+            <a tabindex="0" href="#" class="nav__orders  nav-item flex">
+                <div class="nav__orders_text nav-text">
+                    <p>Returns</p>
+                    <p>&amp; Orders</p>
+                </div>
+            </a> <!-- nav__orders -->
+            <a tabindex="0" href="#" class="nav__cart nav-item flex">
+                <span class="nav__cart_icon nav-icon">
+                    <span class="nav__cart_count">0</span>
+                </span>
+                <span class="nav__cart_text">
+                    Cart
+                </span>
+            </a> <!-- nav__cart -->
+        </div> <!-- nav -->
+
+        <div class="nav2 flex">
+
+            <div class="nav2__side_menu flex" tabindex="0">
+                <div class="nav2__side_menu_icon nav-icon ">
+
+                </div>
+                <span class="nav2__side_menu_text">All</span>
+
+            </div> <!-- sideMenu -->
+
+            <div class="nav2__menu_list nav2-hover flex ">
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Mobiles</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Best Sellers</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0"> Electronics </a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Fashion</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Customer Service</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Prime
+                    <div class="nav2__menu_list_link--prime nav-down-arrow"></div>
+                </a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Home &amp; Kitchen</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Amazon Pay</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Computers</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Today's Deals</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">New Releases</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Toys &amp; Games</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Books</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Coupons</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Sell</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Baby</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Beauty &amp; Personal Care</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Sports, Fitness &amp; Outdoors</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Car &amp; Motorbike</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Health, Household &amp; Personal Care</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Gift Cards</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Grocery &amp; Gourmet Foods</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Video Games</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Pet Supplies</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Kindle eBooks</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Home Improvement</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Gift Ideas </a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">AmazonBasics</a>
+
+                <a href="#" class="nav2__menu_list_link  " tabindex="0">Subscribe &amp; Save</a>
+
+            </div>
+
+        </div> <!-- nav2 -->
+
+        <div class="nav3 flex">
+            <a href="" class="nav3__menu_list_link nav3__menu_list_link--active"><span>Electronics</span></a>
+            <a href="" class="nav3__menu_list_link"><span>Mobiles &amp; Accessories</span></a>
+            <a href="" class="nav3__menu_list_link"><span>Laptops &amp; Accessories</span></a>
+            <a href="" class="nav3__menu_list_link"><span>TV &amp; Home Entertainment</span></a>
+            <a href="" class="nav3__menu_list_link"><span>Audio</span></a>
+            <a href="" class="nav3__menu_list_link"><span>Cameras</span></a>
+            <a href="" class="nav3__menu_list_link"><span>Computer Peripherals</span></a>
+            <a href="" class="nav3__menu_list_link"><span>Smart Technology</span></a>
+            <a href="" class="nav3__menu_list_link"><span>Musical Instruments</span></a>
+            <a href="" class="nav3__menu_list_link"><span>Office &amp; Stationery</span></a>
+        </div> <!-- nav3 -->
+
+    </div> <!-- nav-wrapper -->
+   
+    <div class="product-container">
+        <div class="catagoryLabel">
+            <p>Computers & Accessories › Laptops</p>
+        </div>
+        <div class="product">
+            <div class="product__visualsContainer">
+                <div class="product__visuals">
+                    <div class="product__visualsNav"></div>
+                    <div class="product__visualsDisplay"></div>
+                </div>
+            </div>
+            <div class="product__discription"></div>
+        </div>
+
+    </div> <!-- page-container -->
+   
+    <div class="footer-wrapper">
+        <div class="footer__backToTop">
+            <a href="#navTop">Back to top</a>
+        </div>
+
+        <div class="footer__linksSection">
+            <div class="footer__linksContainer About">
+                <h4 class="footer__linksHeader">Get to Know Us</h4>
+                <a href="">About Us</a>
+                <a href="">Career</a>
+                <a href="">Press Releases</a>
+                <a href="">Amazon Cares</a>
+                <a href="">Gift a Smile</a>
+
+            </div>
+            <div class="footer__linksContainer Contact">
+                <h4 class="footer__linksHeader">Connect with Us</h4>
+                <a href="">Facebook</a>
+                <a href="">Twittwer</a>
+                <a href="">Instagram</a>
+            </div>
+            <div class="footer__linksContainer Business">
+                <h4 class="footer__linksHeader">Make Money with Us</h4>
+                <a href="">Sell on Amazon</a>
+                <a href="">Sell under Amazon Accelerator</a>
+                <a href="">Amazon Global Selling</a>
+                <a href="">Become an Affiliate</a>
+                <a href="">Fulfilment by Amazon</a>
+                <a href="">Advertise Your Products</a>
+                <a href="">Amazon Pay on Merchants</a>
+
+
+            </div>
+            <div class="footer__linksContainer Help">
+                <h4 class="footer__linksHeader">Let Us Help You</h4>
+                <a href="">COVID-19 and Amazon</a>
+                <a href="">Your Account</a>
+                <a href="">Returns Centre</a>
+                <a href="">100% Purchase Protection</a>
+                <a href="">Amazon App Download</a>
+                <a href="">Amazon Assistant Download</a>
+                <a href="">Help</a>
+
+            </div>
+        </div>
+        <hr class="footer__divider">
+        <div class="footer__language">
+            <div class="homepage">
+                <a href="#" class="homepageLink"></a>
+            </div>
+            <div class="language">
+                <span class="globeIcon"></span>
+                <span class="txt">English</span>
+                <span class="upDownIcon"></span>
+
+            </div>
+
+        </div>
+        <div class="footer__regions">
+            <ul>
+                <li><a href="">Brazil</a></li>
+                <li><a href="">Canada</a></li>
+                <li><a href="">Australia</a></li>
+                <li><a href="">China</a></li>
+                <li><a href="">France</a></li>
+                <li><a href="">Germany</a></li>
+                <li><a href="">Italy</a></li>
+                <li><a href="">Japan</a></li>
+                <li><a href="">Mexico</a></li>
+                <li><a href="">Neatherlands</a></li>
+                <li><a href="">Poland</a></li>
+                <li><a href="">Singapore</a></li>
+                <li><a href="">Spain</a></li>
+                <li><a href="">Turkey</a></li>
+                <li><a href="">United Arab Emirates</a></li>
+                <li><a href="">United Kingdome </a></li>
+                <li><a href="">United States</a></li>
+            </ul>
+
+        </div>
+        <div class="footer__otherServices">
+            <div class="footer__otherServicesContainer">
+                <a href="#" class="links">
+                    AbeBooks
+                    <br>
+                    Books, art
+                    <br>
+                    & collectibles
+                </a>
+                <a href="" class="links">
+                    Amazon Web Services
+                    <br>
+                    Scalable Cloud
+                    <br>
+                    Computing Services
+                </a>
+                <a href="" class="links">
+                    Audible
+                    <br>
+                    Download
+                    <br>
+                    Audio Books
+                </a>
+                <a href="" class="links">
+                    DPReview
+                    <br>
+                    Digital
+                    <br>
+                    Photography
+                </a><a href="" class="links">
+                    IMDb
+                    <br>
+                    Movies, TV
+                    <br>
+                    & Celebrities
+                </a>
+                <a href="" class="links">
+                    Shopbop
+                    <br>
+                    Designer
+                    <br>
+                    Fashion Brands</a>
+                <a href="" class="links">
+                    Amazon Business
+                    <br>
+                    Everything For
+                    <br>
+                    Your Business
+                </a>
+                <a href="" class="links">
+                    Prime Now
+                    <br>
+                    2-Hour Delivery
+                    <br>
+                    on Everyday Items
+                </a>
+                <a href="" class="links">
+                    Amazon Prime Music
+                    <br>
+                    75 million songs, ad-free
+                    <br>
+                    Over 10 million podcast episodes
+                </a>
+            </div>
+        </div>
+        <div class="footer__copyrights">
+            <div class="footer__copyrightsContainer">
+                <ul>
+                    <li><a href="">Conditions of Use & Sale</a></li>
+                    <li><a href="">Privacy Notice</a></li>
+                    <li><a href="">Interest-Based Ads</a></li>
+                </ul>
+                <span>© 1996-2021, Amazon.com, Inc. or its affiliates</span>
+            </div>
+        </div>
+
+    </div> <!-- footer-wrapper -->
+
+
+</body>
+
+</html>

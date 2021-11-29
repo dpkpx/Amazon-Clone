@@ -1,0 +1,2 @@
+const navbar=document.querySelector(".nav"),navbar2=document.querySelector(".nav2");new IntersectionObserver((e=>{e[0].isIntersecting||(window.visualViewport.width>=1024||window.screen.availWidth-window.visualViewport.width<50)&&(e[0].target.style="position:fixed;top:0;")})).observe(navbar);const settings={root:null,rootMargin:"-39px",threshold:0};new IntersectionObserver((e=>{e[0].isIntersecting&&(navbar.style="")}),settings).observe(navbar2);
+//# sourceMappingURL=navPosFixed.js.map
