@@ -1,5 +1,5 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js';
-import { getFirestore, collection, getDocs,doc,setDoc,getDoc } from 'https://www.gstatic.com/firebasejs/9.5.0/firebase-firestore.js';
+import { getFirestore, collection, getDocs, doc, setDoc, getDoc } from 'https://www.gstatic.com/firebasejs/9.5.0/firebase-firestore.js';
 
 
 const app = initializeApp({
@@ -14,50 +14,45 @@ const app = initializeApp({
 const db = getFirestore(app);
 
 
-const card_2 = doc(db,"cards/card-2");
 
-function writeData(){
-  const docData={
-    
-          "bottom" : "End of Season Sale",
-          "content" : {
-            "first" : {
-              "img" : "https://firebasestorage.googleapis.com/v0/b/clone-df569.appspot.com/o/card-men%2Fmen's-clothing.jpg?alt=media&token=fc11d753-3fb6-4c2f-94fa-a4bf127b8040",
-              "label" : "Men's Clothing"
-            },
-            "fourth" : {
-              "img" : "https://firebasestorage.googleapis.com/v0/b/clone-df569.appspot.com/o/card-men%2Fbags.jpg?alt=media&token=39154cfa-283d-4ea6-afc9-14c58de2779b",
-              "label" : "Bags & Luggage"
-            },
-            "second" : {
-              "img" : "https://firebasestorage.googleapis.com/v0/b/clone-df569.appspot.com/o/card-men%2Ffootwear.jpg?alt=media&token=2851e135-a62b-4a7e-b7cc-fc121adf862a",
-              "label" : "Footwear"
-            },
-            "third" : {
-              "img" : "https://firebasestorage.googleapis.com/v0/b/clone-df569.appspot.com/o/card-men%2Fwatches.jpg?alt=media&token=65938cb8-8ec1-4735-9142-97e670b9be82",
-              "label" : "Watches"
-            }
-          },
-          "heading" : "Styles for Men | Up to 70% off",
-          "type" : "four-section"
-        }
-      
-    
-  setDoc(card_2,docData)
-  .then(()=>{
-    console.log("sucessfully written");
+window.onload = () => {
+  const url = document.location.href;
+
+  const productId = url.split('?')[1].split('=')[1]
+
+  const productRef = doc(db, `product/${productId}`);
+
+  getDoc(productRef)
+    .then((productSnap) => {
+      const product = productSnap.data();
+
+      loadDataToDom(product)
+
+    })
+}
+
+function loadDataToDom(product) {
+
+  document.querySelector(".categoryLabel p").innerHTML = product.categoryLabel;
+  document.querySelector(".product__title").innerHTML = product.title;
+  document.querySelectorAll(".product__priceValue").forEach(value => value.innerHTML = product.price);
+  document.querySelector(".leftInStock").innerHTML = `Only ${product.leftInStock} left in stock.`;
+
+
+  const navthumb = document.querySelector(".product__visualsNav ol");
+  product.thumbnails.forEach((thumbnail, index) => {
+
+    navthumb.innerHTML = navthumb.innerHTML + `<li order=${index + 1} tabindex="0" class="product__visualsNavThumbnail">
+    <img src="${thumbnail}" alt="thumbnail"></li>`;
+
   })
-  .catch(()=>{
-    console.log("Error");
-    
+
+  const imageContainer = document.querySelector(".product__visualsDisplay ol")
+  let zIndex = 99;
+  product.images.forEach((image, index) => {
+    index != 0 ? zIndex = -1 : zIndex = 99;
+    imageContainer.innerHTML = imageContainer.innerHTML + `<li order=${index + 1} style="z-index: ${zIndex} ;"><img src="${image}"
+  alt="product Image"></li>`;
+
   })
 }
-const cards = collection(db,"cards");
-// getDocs(cards)
-// .then((snapshot)=>{
-//   const data = snapshot.docs.map(doc => {console.log( {"id":doc.id,"title":doc.data().heading})});
-  
-// })
-// .catch((e)=>{
-//   console.log("Got Error :"+ e);
-// })
