@@ -1,0 +1,2 @@
+const thumbnailsContainer=document.querySelector(".product__visualsNavThumbnail").parentElement,images=document.querySelectorAll(".product__visualsDisplay > ol > li");thumbnailsContainer.addEventListener("focusin",(t=>{const e=t.target.closest(".product__visualsNavThumbnail");e&&images.forEach((t=>{t.getAttribute("order")==e.getAttribute("order")?t.style="z-index : 99":t.style="z-index : -1"}))})),thumbnailsContainer.addEventListener("mouseover",(t=>{const e=t.target.closest(".product__visualsNavThumbnail");e&&e.focus()}));
+//# sourceMappingURL=product.js.map

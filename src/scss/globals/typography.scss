@@ -4,7 +4,9 @@
     --fs-350:  0.8125rem;//13px
     --fs-400: 0.875rem;//14px
     --fs-500:  1rem;//16px
+    --fs-550:  1.125rem;//18px
     --fs-600:  1.3125rem;//21px
+    --fs-700:  1.5rem;//24px
 }
 
 
@@ -17,6 +19,10 @@ body{
 option{
     font-family: 'Ubuntu', sans-serif;
     
+}
+h1{
+    font-size: var(--fs-700);
+
 }
 h2{
     font-size: var(--fs-600);

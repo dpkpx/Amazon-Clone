@@ -388,10 +388,10 @@
 .nav3 {
     height: 50px;
     width: 100%;
-    justify-content: space-between;
+    justify-content:flex-start;
     padding: 0 10px 0 30px;
     background-color: var(--light-bg);
-    border-bottom: 1px solid hsl(0deg 0% 0% / 10%);
+    border-bottom: 1px solid var(--section-divider);
 
     &__menu_list_link {
 
@@ -403,6 +403,7 @@
         outline: none;
 
         &:focus-visible {
+            outline: none;
             box-shadow: inset 0 0 0 3px var(--accent-active);
 
         }
