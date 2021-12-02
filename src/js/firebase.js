@@ -35,6 +35,7 @@ function loadDataToDom(product) {
 
   document.querySelector(".categoryLabel p").innerHTML = product.categoryLabel;
   document.querySelector(".product__title").innerHTML = product.title;
+  document.querySelector(".product__storeLink").innerHTML = `Visit the ${product.store} Store`;
   document.querySelectorAll(".product__priceValue").forEach(value => value.innerHTML = product.price);
   document.querySelector(".leftInStock").innerHTML = `Only ${product.leftInStock} left in stock.`;
 
