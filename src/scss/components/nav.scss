@@ -49,6 +49,24 @@
     border-top-color: var(--down-arrow);
     border-bottom-width: 0;
     margin: 16px 0 0 2px;
+    &--prime{
+        margin: 0 0 2px 0;
+
+    }
+}
+.popUp-up-arrow {
+    display: inline-block;
+    position: absolute;
+    top: -8px;
+    left:50px;
+    width: 0;
+    height: 0;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-color: var(--light-bg);
+    border-top-width: 0;
+   
 }
 
 .nav-icon {
@@ -317,7 +335,7 @@
     height: 40px;
     background-color: var(--nav2-dark);
     padding: 0 rem(15) 0 rem(10);
-    overflow: hidden;
+    // overflow: hidden;
 
     &__side_menu {
         padding: 7px 9px;
@@ -352,7 +370,7 @@
     &__menu_list {
         height: 100%;
         flex-wrap: wrap;
-        overflow: hidden;
+        // overflow: hidden;
         flex: 1 1 auto;
         padding-left: 3px;
 
@@ -365,9 +383,15 @@
             padding: 6px 9px;
             margin: 5px 0 6px 0;
             white-space: nowrap;
+            position: relative;
 
             &--prime {
-                margin: 0 0 2px 0;
+
+                &:hover {
+                    &>.primePopUp{
+                        display: block;
+                    }
+                }
             }
 
             &:focus-visible {
@@ -429,5 +453,24 @@
         &:hover>span {
             box-shadow: 0 2px 0 0 var(--accent-active);
         }
+    }
+}
+
+//========= pop-ups =========//
+
+.primePopUp{
+    display: none;
+    position: absolute;
+    width: 320px;
+    aspect-ratio: 1;
+    border-radius: 3px;
+    background-color: var(--light-bg);
+    top: 27px;
+    left: -4px;
+    z-index: 9999;
+    padding: 15px;
+    & img{
+        width: 100%;
+        height: 100%;
     }
 }

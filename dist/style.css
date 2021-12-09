@@ -182,6 +182,23 @@ h2 {
   border-bottom-width: 0;
   margin: 16px 0 0 2px;
 }
+.nav-down-arrow--prime {
+  margin: 0 0 2px 0;
+}
+
+.popUp-up-arrow {
+  display: inline-block;
+  position: absolute;
+  top: -8px;
+  left: 50px;
+  width: 0;
+  height: 0;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent;
+  border-bottom-color: var(--light-bg);
+  border-top-width: 0;
+}
 
 .nav-icon {
   background: url(../assets/icons/icons.png);
@@ -373,7 +390,6 @@ h2 {
   height: 40px;
   background-color: var(--nav2-dark);
   padding: 0 0.9375rem 0 0.625rem;
-  overflow: hidden;
 }
 .nav2__side_menu {
   padding: 7px 9px;
@@ -400,7 +416,6 @@ h2 {
 .nav2__menu_list {
   height: 100%;
   flex-wrap: wrap;
-  overflow: hidden;
   flex: 1 1 auto;
   padding-left: 3px;
 }
@@ -411,9 +426,10 @@ h2 {
   padding: 6px 9px;
   margin: 5px 0 6px 0;
   white-space: nowrap;
+  position: relative;
 }
-.nav2__menu_list_link--prime {
-  margin: 0 0 2px 0;
+.nav2__menu_list_link--prime:hover > .primePopUp {
+  display: block;
 }
 .nav2__menu_list_link:focus-visible {
   outline: none;
@@ -460,6 +476,23 @@ h2 {
 }
 .nav3__menu_list_link:hover > span {
   box-shadow: 0 2px 0 0 var(--accent-active);
+}
+
+.primePopUp {
+  display: none;
+  position: absolute;
+  width: 320px;
+  aspect-ratio: 1;
+  border-radius: 3px;
+  background-color: var(--light-bg);
+  top: 27px;
+  left: -4px;
+  z-index: 9999;
+  padding: 15px;
+}
+.primePopUp img {
+  width: 100%;
+  height: 100%;
 }
 
 .carousel {
