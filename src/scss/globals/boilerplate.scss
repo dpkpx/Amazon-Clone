@@ -43,9 +43,22 @@ ol {
 .page-container {
     max-width: 1500px;
     margin: 0 auto;
+    position: relative;
+}
 
+.focusOut{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 1px);
+    background-color: black;
+    z-index: 9998;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
 }
 .product-container {
+    position: relative;
     max-width: 1500px;
     margin: 0 auto;
     background-color: var(--light-bg);
